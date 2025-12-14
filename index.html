@@ -3,20 +3,17 @@
 <head>
 <script>
 const now = Date.now();
-const savedTime = localStorage.getItem("firstTime");
+const savedTime = Number(localStorage.getItem("firstTime_v2"));
 
-// 10 minutes = 600000 milliseconds
+// 30 minutes = 1800000 milliseconds
 const delay = 1800000;
 
 if (!savedTime) {
-  // first time open
-  localStorage.setItem("firstTime", now);
-  window.location.href = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp-site.com%2FV7DC3A%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120236610253340761%26utm_content%3D120236610253650761%26utm_term%3D120236610253480761%26utm_campaign%3D120236610253340761&h=AT2tWuVk0NnkMtbt257Dqj5xMOWX19Sn41Eao6Ub5klIzRJMAx9TTMXfLiw70mR6Q-pT_v3AgFOq3hDBRz0WgXLVRIJ0J1o7lPw3Jwm_FmFru5rFGZX5AJMg-5QKs8JmXg3Pvw";
+  localStorage.setItem("firstTime_v2", now);
+  window.location.href = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp-site.com%2FV7DC3A%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120236610253340761%26utm_content%3D120236610253650761%26utm_term%3D120236610253480761%26utm_campaign%3D120236610253340761";
 } else if (now - savedTime < delay) {
-  // within 10 minutes
-  window.location.href = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp-site.com%2FV7DC3A%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120236610253340761%26utm_content%3D120236610253650761%26utm_term%3D120236610253480761%26utm_campaign%3D120236610253340761&h=AT2tWuVk0NnkMtbt257Dqj5xMOWX19Sn41Eao6Ub5klIzRJMAx9TTMXfLiw70mR6Q-pT_v3AgFOq3hDBRz0WgXLVRIJ0J1o7lPw3Jwm_FmFru5rFGZX5AJMg-5QKs8JmXg3Pvw";
+  window.location.href = "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.whatsapp-site.com%2FV7DC3A%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120236610253340761%26utm_content%3D120236610253650761%26utm_term%3D120236610253480761%26utm_campaign%3D120236610253340761";
 } else {
-  // after 10 minutes
   window.location.href = "https://t.me/+pLHyrbgbqcBmNWM1";
 }
 </script>
